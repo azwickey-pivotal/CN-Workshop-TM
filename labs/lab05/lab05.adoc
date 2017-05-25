@@ -100,7 +100,7 @@ applications:
   buildpack: java_buildpack_offline
   timeout: 180
   env:
-    CF_TARGET: https://api.cfpoc2.internal.t-mobile.com
+    CF_TARGET: https://api.YOUR.SYSTEM.DOMAIN
     JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
   services:
   - config-server
@@ -370,6 +370,6 @@ image::images/ui.jpg[]
 ---------------------------------------------------------------------
 $ cf stop cloud-native-spring
 ---------------------------------------------------------------------
-. Refresh the UI app.  What happens?  Now you get a nasty error that is not very user friendly!
+. Refresh the UI app.  What happens?  No data but you don't know why!
 
 . Next we'll learn how to make our UI Application more resilient in the case that our downstream services are unavailable.

@@ -33,8 +33,10 @@ public class CloudNativeSpringUiApplication {
 	public class CityClientFallback implements CityClient {
 		@Override
 		public Resources<City> getCities() {
-			//We'll just return an empty response
-			return new Resources(Collections.EMPTY_LIST);
+      //We'll just return a dummy response
+      City c = new City();
+      c.setName("I'm an Error!");
+      return new Resources(Arrays.asList(c));
 		}
 	}
 ---------------------------------------------------------------------
